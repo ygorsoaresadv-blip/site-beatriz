@@ -1,0 +1,48 @@
+/* Tokens aprovados (claro = padrão; escuro via data-theme="dark" no <html>).
+   Copiados do protótipo: não alterar valores sem aprovação. */
+:root{
+  /* TEMA CLARO (padrão) */
+  --bg:#fbf8fc; --bg-2:#ffffff; --glass:rgba(40,16,48,.035); --glass-2:rgba(40,16,48,.06);
+  --line:rgba(40,16,48,.10); --line-2:rgba(40,16,48,.18);
+  --fg:#1d1324; --muted:#665a73; --dim:#8f8499;
+  --accent:#e0368f; --accent-2:#b3125f; --accent-deep:#9e1563; --violet:#7a5cf0;
+  --ok:#17855a;
+  --btn-a:#d62a82; --btn-b:#a8105f;
+  --nav-bg:rgba(251,248,252,.78); --menu-bg:rgba(251,248,252,.96);
+  --word-stroke:rgba(40,16,48,.07); --chip-bg:rgba(255,255,255,.72); --shadow-c:rgba(60,20,70,.22);
+  --li-text:#3a2d46; --card-a:rgba(255,255,255,.92); --card-b:rgba(255,255,255,.62);
+  --card-shadow:0 1px 2px rgba(60,20,70,.05),0 18px 44px -26px rgba(60,20,70,.22);
+  --panel-a:rgba(255,255,255,.96); --panel-b:rgba(250,238,246,.92); --inset:rgba(255,255,255,.9);
+  --badge-bg:rgba(122,92,240,.12); --badge-fg:#5a3fd0; --note-text:#3a2d46;
+  --stamp-bg:rgba(255,255,255,.88); --body-text:#3a2d46;
+  --num-a:#2a1631; --num-b:#b3125f;
+  --form-a:#ffffff; --form-b:rgba(255,255,255,.7); --field-bg:#ffffff; --err:#c4155f;
+  --summary-bg:rgba(40,16,48,.045); --summary-text:#2c2036;
+  --ring-text:rgba(40,16,48,.5); --mono-ring:rgba(40,16,48,.28); --grain:.035;
+  --display:"Onest",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --r:18px; --max:1180px;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  /* TEMA ESCURO (idêntico à prévia v1) */
+  --bg:#0a0810; --bg-2:#110d18; --glass:rgba(255,255,255,.035); --glass-2:rgba(255,255,255,.06);
+  --line:rgba(244,232,250,.09); --line-2:rgba(244,232,250,.16);
+  --fg:#f4eef7; --muted:#a99db6; --dim:#6f6580;
+  --accent:#f0479f; --accent-2:#ff7cc2; --accent-deep:#9e1563; --violet:#8b6cff;
+  --ok:#6be3b1;
+  --btn-a:#f0479f; --btn-b:#c81f78;
+  --nav-bg:rgba(14,10,20,.66); --menu-bg:rgba(10,8,16,.94);
+  --word-stroke:rgba(244,232,250,.08); --chip-bg:rgba(20,14,28,.55); --shadow-c:rgba(0,0,0,.6);
+  --li-text:#e6dcec; --card-a:rgba(255,255,255,.045); --card-b:rgba(255,255,255,.015);
+  --card-shadow:0 0 #0000;
+  --panel-a:rgba(40,22,50,.7); --panel-b:rgba(16,11,22,.85); --inset:rgba(255,255,255,.06);
+  --badge-bg:rgba(139,108,255,.14); --badge-fg:#c4b5ff; --note-text:#ddd2e4;
+  --stamp-bg:rgba(14,10,20,.8); --body-text:#d9cfe0;
+  --num-a:#ffffff; --num-b:#d7a7c6;
+  --form-a:rgba(255,255,255,.05); --form-b:rgba(255,255,255,.015); --field-bg:rgba(0,0,0,.25); --err:#ff9fcf;
+  --summary-bg:rgba(0,0,0,.3); --summary-text:#e4d9ea;
+  --ring-text:rgba(244,232,250,.45); --mono-ring:rgba(244,232,250,.22); --grain:.05;
+  color-scheme:dark;
+}

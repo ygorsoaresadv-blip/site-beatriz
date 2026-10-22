@@ -1,0 +1,212 @@
+<!--
+titulo: Beatriz Farias Marques Advocacia · Cível, saúde, bancário e trabalhista
+descricao: Advocacia cível, médica e da saúde, bancária e trabalhista, e assessoria empresarial. Atendimento online em todo o Brasil e presencial em Alphaville (SP), com hora marcada.
+scripts: three gsap scrolltrigger site home triagem
+jsonld: sim
+-->
+<!-- HERO -->
+<section class="hero gutter">
+  <div class="orb-fallback" id="orbFallback" aria-hidden="true"></div>
+  <canvas id="orb" aria-hidden="true"></canvas>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Advocacia cível, médica, bancária e trabalhista</span>
+      <h1 class="split-load">Direito feito com método, clareza e tecnologia.</h1>
+      <p class="lead">Atendimento a pessoas e empresas, online em todo o Brasil e presencial em Alphaville, com hora marcada. Cada caso é conduzido pessoalmente pela advogada, do primeiro contato ao encerramento.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary magnetic" href="#triagem">Contar meu caso {{icone_seta}}</a>
+        <a class="btn btn-ghost magnetic wa-link" href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{{icone_wa}}</svg> WhatsApp</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Resposta em até 24 horas</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Online · Alphaville (SP)</span>
+      </div>
+    </div>
+    <div class="chips" aria-hidden="true">
+      <div class="chip c1 float"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg></i><div><b>Decisões com dados</b><small>Jurimetria aplicada ao seu caso</small></div></div>
+      <div class="chip c2 float"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M7 9h6M7 13h10"/></svg></i><div><b>Painel do cliente</b><small>O andamento em linguagem simples</small></div></div>
+      <div class="chip c3 float"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></i><div><b>LGPD</b><small>Seus dados tratados com cuidado</small></div></div>
+    </div>
+  </div>
+  <div class="hero-word" id="heroWord" aria-hidden="true">MÉTODO · CLAREZA</div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Assessoria empresarial</span><span>Fluxos de trabalho</span><span>Governança de IA</span><span>Contencioso cível</span><span>Negativa de cobertura</span><span>Revisão de contratos bancários</span><span>Superendividamento</span><span>Fraudes via Pix</span><span>Verbas rescisórias</span><span>Responsabilidade civil</span><span>Compliance trabalhista</span><span>Legal Ops</span>
+  <span>Assessoria empresarial</span><span>Fluxos de trabalho</span><span>Governança de IA</span><span>Contencioso cível</span><span>Negativa de cobertura</span><span>Revisão de contratos bancários</span><span>Superendividamento</span><span>Fraudes via Pix</span><span>Verbas rescisórias</span><span>Responsabilidade civil</span><span>Compliance trabalhista</span><span>Legal Ops</span>
+</div></div>
+
+<!-- ÁREAS (cartões gerados de content/areas.json por scripts/build.mjs) -->
+<section class="block gutter" id="atuacao">
+  <div class="container">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Áreas de atuação</span>
+        <h2 class="split">Cada área com o mesmo padrão de cuidado.</h2>
+      </div>
+      <div class="seg" role="group" aria-label="Escolha o público">
+        <span class="pill" id="segPill"></span>
+        <button type="button" aria-pressed="true" data-aud="p">Para você</button>
+        <button type="button" aria-pressed="false" data-aud="e">Para sua empresa</button>
+      </div>
+    </div>
+    <div class="areas" id="areas" aria-live="polite">
+{{areas_cartoes}}
+    </div>
+    {{areas_dados}}
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="block gutter pt-20" id="metodo">
+  <div class="container method">
+    <div class="method-left">
+      <span class="eyebrow">Método</span>
+      <h2 class="split">Gestão jurídica com processo, não com improviso.</h2>
+      <p class="lead">A formação em Legal Operations e Inteligência Artificial está no jeito de trabalhar: prazos controlados por sistema, documentos organizados e comunicação previsível. A tecnologia cuida da rotina para que a atenção fique no seu caso.</p>
+      <div class="panel" role="figure" aria-label="Exemplo ilustrativo do painel do cliente">
+        <div class="panel-top"><div class="dots"><i></i><i></i><i></i></div><span class="badge">Exemplo ilustrativo</span></div>
+        <h3>Ação de obrigação de fazer · Plano de saúde</h3>
+        <div class="sub">Processo nº 0000000-00.2026.8.26.0000</div>
+        <ol class="tl">
+          <li class="done"><span class="st"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><div>Ação protocolada<small>Pedido de liminar incluído</small></div><time>02/03</time></li>
+          <li class="done"><span class="st"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><div>Operadora citada<small>Ela tem 15 dias úteis para responder</small></div><time>09/03</time></li>
+          <li class="now"><span class="st"></span><div>Aguardando a resposta da operadora<small>Nenhuma providência sua é necessária agora</small></div><time>até 30/03</time></li>
+          <li class="next"><span class="st"></span><div>Nossa manifestação sobre a resposta</div><time>—</time></li>
+        </ol>
+        <div class="panel-note"><b>Em palavras simples:</b> o pedido já está com o juiz e a operadora foi avisada. Você recebe uma mensagem assim que houver novidade.</div>
+      </div>
+    </div>
+    <div class="steps" id="steps">
+      <span class="fill" id="stepsFill"></span>
+{{passos_metodo}}
+    </div>
+  </div>
+</section>
+
+<!-- COMPROMISSOS -->
+<section class="gutter" aria-label="Compromissos de atendimento">
+  <div class="container commit">
+    <div><b>24h</b><span>para responder o primeiro contato, em dias úteis</span></div>
+    <div><b>Online</b><span>em todo o Brasil, com presencial em Alphaville sob agendamento</span></div>
+    <div><b>1:1</b><span>a mesma advogada do primeiro contato ao fim do caso</span></div>
+    <div><b>LGPD</b><span>contatos que não viram contrato são apagados em 30 dias</span></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="block gutter" id="sobre">
+  <div class="container about">
+    <div class="portrait">
+      <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"/></defs>
+        <text font-family="JetBrains Mono, monospace" font-size="7.4" letter-spacing="3.1" class="ring-t"><textPath href="#circ">BEATRIZ FARIAS MARQUES · ADVOCACIA · LEGAL OPS · INTELIGÊNCIA ARTIFICIAL ·</textPath></text>
+        <circle cx="192" cy="100" r="2.6" fill="#f0479f"/>
+      </svg>
+      <span class="ring2"></span>
+      <img src="/assets/img/beatriz.jpg" alt="Retrato de Beatriz Farias Marques" width="600" height="600" loading="lazy" decoding="async">
+      <span class="stamp">OAB/SP <b>557.676</b></span>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Sobre</span>
+      <h2 class="split">Beatriz Farias Marques</h2>
+      <!-- REVISAR: Beatriz (bio escrita a partir do LinkedIn) -->
+      <p class="body">Advogada formada pela Universidade São Judas Tadeu e pós-graduanda em Legal Operations e Inteligência Artificial. Atua no contencioso cível e estratégico, no direito bancário e no direito médico e da saúde, além de questões trabalhistas de pessoas e empresas.</p>
+      <p class="body">A experiência com operações jurídicas mudou a forma como ela conduz cada caso: prazos sob controle, decisões apoiadas em dados e um cliente que nunca precisa perguntar em que pé está o processo.</p>
+      <blockquote>A tecnologia cuida da rotina. A atenção fica com as pessoas.</blockquote>
+      <div class="creds">
+        <div class="cred"><small>Inscrição</small><span>OAB/SP 557.676</span></div>
+        <div class="cred"><small>Formação</small><span>Direito · Universidade São Judas Tadeu</span></div>
+        <div class="cred"><small>Pós-graduação</small><span>Legal Ops e Inteligência Artificial</span></div>
+        <div class="cred"><small>Atendimento</small><span>Online em todo o Brasil · Alphaville (SP)</span></div>
+      </div>
+      <div><a class="btn btn-ghost" href="{{linkedin}}" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V21h-4V9.75Z"/></svg> Ver perfil no LinkedIn</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIAGEM -->
+<section class="block gutter pt-20" id="triagem">
+  <div class="container triage">
+    <div class="triage-left">
+      <span class="eyebrow">Primeiro contato</span>
+      <h2 class="split">Conte o que aconteceu.</h2>
+      <p class="lead">Quatro perguntas rápidas organizam a sua mensagem. No fim, você revisa o texto e envia pelo WhatsApp. A resposta vem da própria advogada em até 24 horas.</p>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>Esta ferramenta só organiza o seu relato. Ela não dá parecer nem respostas automáticas sobre o caso: quem analisa é a advogada.</span></div>
+    </div>
+    <form class="form" id="tform" novalidate aria-label="Triagem do primeiro contato">
+      <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+
+      <div class="q" data-step="0">
+        <fieldset><legend>Quem está buscando atendimento?</legend>
+        <div class="opts">
+          <div class="opt"><input type="radio" name="quem" id="q-p" value="Pessoa física"><label for="q-p"><b>Para mim</b><small>Pessoa física</small></label></div>
+          <div class="opt"><input type="radio" name="quem" id="q-e" value="Empresa"><label for="q-e"><b>Para minha empresa</b><small>Pessoa jurídica</small></label></div>
+        </div></fieldset>
+      </div>
+
+      <div class="q" data-step="1" hidden>
+        <fieldset><legend>Sobre qual assunto?</legend>
+        <div class="opts">
+          <div class="opt"><input type="radio" name="area" id="a1" value="Cível"><label for="a1"><b>Cível</b><small>Contratos, cobranças, indenizações</small></label></div>
+          <div class="opt"><input type="radio" name="area" id="a2" value="Médico e da Saúde"><label for="a2"><b>Médico e da saúde</b><small>Plano de saúde, tratamentos, erro médico</small></label></div>
+          <div class="opt"><input type="radio" name="area" id="a3" value="Bancário"><label for="a3"><b>Bancário</b><small>Juros, dívidas, golpes e fraudes</small></label></div>
+          <div class="opt"><input type="radio" name="area" id="a4" value="Trabalhista"><label for="a4"><b>Trabalhista</b><small>Rescisão, horas extras, vínculo</small></label></div>
+          <div class="opt span-all" id="opt-assessoria" hidden><input type="radio" name="area" id="a6" value="Assessoria empresarial"><label for="a6"><b>Assessoria empresarial</b><small>Fluxos, IA, LGPD e Legal Ops</small></label></div>
+          <div class="opt span-all"><input type="radio" name="area" id="a5" value="Não sei dizer"><label for="a5"><b>Não sei dizer</b><small>Tudo bem, a advogada identifica</small></label></div>
+        </div></fieldset>
+      </div>
+
+      <div class="q" data-step="2" hidden>
+        <div class="field"><label class="label-lg" for="relato">Em poucas linhas, o que aconteceu?</label>
+          <p class="hint" id="relato-aviso">Não envie dados de saúde, documentos ou números de processo aqui. Isso se combina depois, em canal adequado.</p>
+          <textarea id="relato" maxlength="2000" aria-describedby="relato-aviso" placeholder="Ex.: Meu plano de saúde negou a cirurgia indicada pelo médico e a data está marcada para o mês que vem."></textarea></div>
+        <fieldset><legend class="legend-sm">Existe alguma data próxima envolvida?</legend>
+        <div class="opts">
+          <div class="opt"><input type="radio" name="urg" id="u1" value="Sim, há urgência ou prazo próximo"><label for="u1"><b>Sim</b><small>Prazo, audiência, cirurgia ou cobrança</small></label></div>
+          <div class="opt"><input type="radio" name="urg" id="u2" value="Não há data próxima"><label for="u2"><b>Não</b><small>Posso aguardar o contato</small></label></div>
+        </div></fieldset>
+      </div>
+
+      <div class="q" data-step="3" hidden>
+        <div class="label">Como podemos te chamar?</div>
+        <div class="row2">
+          <div class="field"><label for="nome">Nome</label><input id="nome" autocomplete="name" maxlength="120"></div>
+          <div class="field"><label for="cidade">Cidade / UF</label><input id="cidade" autocomplete="address-level2" maxlength="120"></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="empresa_site">Não preencha este campo</label><input id="empresa_site" name="empresa_site" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" id="lgpd"><span>Concordo que meus dados sejam usados só para este atendimento e apagados em 30 dias se não houver contratação, como prevê a <a href="/privacidade">política de privacidade</a>.</span></label>
+        <div id="turnstile"></div>
+      </div>
+
+      <div class="q" data-step="4" hidden>
+        <div class="label">Sua mensagem está pronta</div>
+        <p class="hint tight">Revise o texto. Ao tocar no botão, o WhatsApp abre com ele preenchido.</p>
+        <div class="summary" id="summary"></div>
+        <a class="btn btn-primary self-start" id="sendWa" href="https://wa.me/{{whatsapp}}" target="_blank" rel="noopener">Enviar pelo WhatsApp {{icone_seta}}</a>
+      </div>
+
+      <div class="err" id="ferr" role="alert"></div>
+      <div class="form-actions">
+        <button type="button" class="link-btn" id="back" hidden>← Voltar</button>
+        <span></span>
+        <button type="submit" class="btn btn-primary" id="next">Continuar {{icone_seta}}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="block gutter pt-20" id="duvidas">
+  <div class="container faq">
+    <div class="faq-head">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="split">Antes de conversar</h2>
+    </div>
+    <div>
+{{faq_home}}
+    </div>
+  </div>
+</section>
+
+{{cta_final}}

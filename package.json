@@ -1,0 +1,17 @@
+{
+  "name": "site-beatriz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "npx --yes serve dist -l 4173",
+    "dev": "node scripts/build.mjs && npx --yes serve dist -l 4173",
+    "imagens": "node scripts/gerar-imagens.mjs",
+    "verificar": "node scripts/verificar.mjs",
+    "lighthouse": "npx --yes lighthouse http://localhost:4173 --view"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0",
+    "@axe-core/playwright": "^4.10.0"
+  }
+}
