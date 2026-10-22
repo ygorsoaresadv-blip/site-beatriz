@@ -41,6 +41,10 @@ npx playwright install chromium
 npm run verificar
 ```
 
+## Publicação provisória (GitHub Pages)
+
+Enquanto o domínio e a Cloudflare não estão prontos, o site está em https://ygorsoaresadv-blip.github.io/site-beatriz/. Cada push na `main` republica automaticamente (`.github/workflows/pages.yml`). O GitHub Pages ignora `public/_headers`, então a CSP e os cabeçalhos de segurança só valem na Cloudflare. Depois da migração, desative o Pages em Settings → Pages.
+
 ## Publicar na Cloudflare Pages
 
 1. Cloudflare → Workers & Pages → Create → Pages → Connect to Git → escolha este repositório.
