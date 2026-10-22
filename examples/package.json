@@ -1,0 +1,14 @@
+{
+  "name": "site-beatriz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx --yes serve . -l 4173",
+    "verificar": "node scripts/verificar.mjs",
+    "lighthouse": "npx --yes lighthouse http://localhost:4173 --view"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0",
+    "@axe-core/playwright": "^4.10.0"
+  }
+}

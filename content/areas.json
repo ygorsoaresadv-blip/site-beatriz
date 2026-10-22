@@ -1,0 +1,105 @@
+[
+  {
+    "id": "civel",
+    "nome": "Cível",
+    "pessoa": {
+      "descricao": "Para quem teve um contrato descumprido, sofreu um dano ou está sendo cobrado de forma indevida.",
+      "itens": [
+        "Contratos e cobranças indevidas",
+        "Indenizações por danos",
+        "Direito do consumidor",
+        "Execuções e acordos"
+      ]
+    },
+    "empresa": {
+      "descricao": "Contencioso estratégico e gestão de carteiras de processos com indicadores e previsibilidade.",
+      "itens": [
+        "Contencioso estratégico",
+        "Contratos empresariais",
+        "Recuperação de crédito",
+        "Gestão de carteira (Legal Ops)"
+      ]
+    }
+  },
+  {
+    "id": "saude",
+    "nome": "Médico e da saúde",
+    "pessoa": {
+      "descricao": "Quando o plano de saúde nega um tratamento ou o cuidado recebido falhou.",
+      "itens": [
+        "Negativa de cobertura",
+        "Reajustes abusivos",
+        "Medicamentos e tratamentos",
+        "Erro médico"
+      ]
+    },
+    "empresa": {
+      "descricao": "Segurança jurídica para clínicas, hospitais e profissionais de saúde.",
+      "itens": [
+        "Defesa em ações de responsabilidade",
+        "Prontuário e consentimento",
+        "LGPD de dados de saúde",
+        "Contratos com operadoras"
+      ]
+    }
+  },
+  {
+    "id": "bancario",
+    "nome": "Bancário",
+    "pessoa": {
+      "descricao": "Para quem paga juros que não fecham, caiu em golpe ou não consegue mais pagar as dívidas.",
+      "itens": [
+        "Revisão de juros e tarifas",
+        "Superendividamento",
+        "Golpes e fraudes via Pix",
+        "Negativação indevida"
+      ]
+    },
+    "empresa": {
+      "descricao": "Renegociação e defesa da empresa diante de bancos e financeiras.",
+      "itens": [
+        "Revisão de contratos de crédito",
+        "Renegociação de dívidas",
+        "Defesa em execuções",
+        "Garantias e avais"
+      ]
+    }
+  },
+  {
+    "id": "trabalhista",
+    "nome": "Trabalhista",
+    "pessoa": {
+      "descricao": "Direitos de quem foi demitido, faz horas extras sem receber ou trabalha sem registro.",
+      "itens": [
+        "Verbas rescisórias",
+        "Horas extras",
+        "Reconhecimento de vínculo",
+        "Assédio no trabalho"
+      ]
+    },
+    "empresa": {
+      "descricao": "Prevenção de passivo e defesa da empresa, com rotinas revisadas e políticas claras.",
+      "itens": [
+        "Defesa em reclamações",
+        "Auditoria preventiva",
+        "Compliance trabalhista",
+        "Políticas internas"
+      ]
+    }
+  },
+  {
+    "id": "assessoria-empresarial",
+    "nome": "Assessoria empresarial",
+    "somente": "empresa",
+    "empresa": {
+      "descricao": "Assessoria jurídica e operacional para estruturar os fluxos de trabalho da empresa e adotar tecnologia e inteligência artificial com segurança jurídica.",
+      "itens": [
+        "Mapeamento de fluxos jurídicos e administrativos",
+        "Política de uso de IA e governança",
+        "LGPD e proteção de dados",
+        "Contratos e automação de documentos",
+        "Legal Ops para áreas jurídicas"
+      ]
+    }
+  }
+]
