@@ -18,6 +18,10 @@ const DIST = r('dist');
 const ctx = { window: {} };
 vm.runInNewContext(ler('assets/js/config.js'), ctx);
 const CFG = ctx.window.BF_CONFIG;
+// Publicação provisória em subpasta (GitHub Pages): SITE_DOMINIO=usuario.github.io/site-beatriz BASE_PATH=/site-beatriz
+if (process.env.SITE_DOMINIO) CFG.dominio = process.env.SITE_DOMINIO;
+const BASE = (process.env.BASE_PATH || '').replace(/\/$/, '');
+const comBase = s => BASE ? s.replace(/(\s(?:href|src)=")\/(?!\/)/g, `$1${BASE}/`).replace(/url\(\/(?!\/)/g, `url(${BASE}/`).replace(/("(?:src|start_url)":\s*")\//g, `$1${BASE}/`) : s;
 const AREAS = JSON.parse(ler('content/areas.json'));
 const FAQ = JSON.parse(ler('content/faq.json'));
 
@@ -171,6 +175,7 @@ for (const arq of paginas(r('src/pages'))) {
     ...comuns,
     titulo: esc(meta.titulo), descricao: esc(meta.descricao),
     url: `https://${CFG.dominio}${rota === '/' ? '/' : rota}`,
+    base: BASE,
     robots: meta.robots || 'index, follow',
     head_extra: meta.jsonld === 'sim' ? jsonld() : '',
     nav, rodape,
@@ -180,7 +185,7 @@ for (const arq of paginas(r('src/pages'))) {
   };
   dados.conteudo = substituir(corpo, dados);
   // CSS e JS ganham ?v=<hash> para poderem ter cache longo (ver public/_headers).
-  const html = substituir(layout, dados).replace(/(["'])(\/assets\/(?:css|js|vendor)\/[\w.-]+\.(?:css|js))\1/g, (m, q, p) => `${q}${p}?v=${versao(p)}${q}`);
+  const html = comBase(substituir(layout, dados).replace(/(["'])(\/assets\/(?:css|js|vendor)\/[\w.-]+\.(?:css|js))\1/g, (m, q, p) => `${q}${p}?v=${versao(p)}${q}`));
 
   // Conferências simples: CSP sem inline e nenhum marcador esquecido.
   if (/\sstyle=/.test(html)) problemas.push(`${arq}: atributo style inline`);
@@ -200,6 +205,7 @@ for (const arq of paginas(r('src/pages'))) {
 /* ---------- arquivos estáticos ---------- */
 fs.cpSync(r('assets'), path.join(DIST, 'assets'), { recursive: true });
 for (const f of ['_headers', 'favicon.svg', 'site.webmanifest']) if (fs.existsSync(r('public', f))) fs.copyFileSync(r('public', f), path.join(DIST, f));
+for (const f of ['assets/css/fontes.css', 'site.webmanifest']) { const p = path.join(DIST, f); fs.writeFileSync(p, comBase(fs.readFileSync(p, 'utf8'))); }
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${CFG.dominio}/sitemap.xml\n`);
 const hoje = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>

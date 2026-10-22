@@ -19,7 +19,7 @@ function renderAreas(){
   areasEl.innerHTML = AREAS.filter(a => !a.only || a.only === aud).map(a => {
     const c = a[aud];
     return `<article class="card area ${a.cls}" data-id="${a.id}"><div class="top"><span class="ico">${ICONS[a.id] || ''}</span><span class="tag">${aud === 'p' ? 'Pessoa física' : 'Empresas'}</span></div>
-      <h3><a href="/areas/${a.id}">${esc(a.t)}</a></h3><p class="d swap">${esc(c.d)}</p><ul class="swap">${c.i.map(x => `<li>${esc(x)}</li>`).join('')}</ul></article>`;
+      <h3><a href="${root.dataset.base || ''}/areas/${a.id}">${esc(a.t)}</a></h3><p class="d swap">${esc(c.d)}</p><ul class="swap">${c.i.map(x => `<li>${esc(x)}</li>`).join('')}</ul></article>`;
   }).join('');
   window.BF && window.BF.bindSpot();
 }
